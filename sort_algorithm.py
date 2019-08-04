@@ -9,17 +9,30 @@ def bubbleSort(num):
     for i in range(n):
         for j in range(n-1-i):
             if num[j] > num[j+1]:
-                temp = num[j]
-                num[j] = num[j + 1]
-                num[j+1] = temp
+              num[j], num[j+1] = num[j+1], num[j]  
+    return num
+
+#  改进的冒泡排序 （若一趟中没有值交换位置，说明已经有序了可以结束）
+
+def bulleSort(num):
+    if len(num) <= 1:
+        return num
+    for i in range(len(num)-1):
+        state = False   # 假设本次循环状态没有改变
+        for j in range(len(num)-i-1):
+            if num[j] > num[j+1]:
+                num[j], num[j+1] = num[j+1], num[j]
+                state = True   #  有数值交换，那么状态就为真
+        if not state:   # 遍历一次没有数值交换，则说明已经排好序
+            break
     return num
     
+# 选择排序
+# 选择排序的思路是固定位置，选择排序，即：先从序列中，找到最小的元素，放到第一个位置
+# 然后找到第二小的元素，放到第二个位置，以此类推，直到排好所有的值。
     
-    # 选择排序
-    # 选择排序的思路是固定位置，选择排序，即：先从序列中，找到最小的元素，放到第一个位置
-    # 然后找到第二小的元素，放到第二个位置，以此类推，直到排好所有的值。
-    
- def selectSort(num):
+
+def selectSort(num):
     n = len(num)
     if n <= 1:
         return num
