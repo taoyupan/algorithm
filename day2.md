@@ -113,16 +113,9 @@ if __name__ == '__main__':
     # print('')
     # tree.postorder(tree.root)
 
-'''
 
 
-
-
-
-
-
-
------
+----
 
 
 
