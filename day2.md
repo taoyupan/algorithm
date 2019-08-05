@@ -24,7 +24,7 @@
 **中序遍历 (左-根-右)** <br>
 **后序遍历 (左-右-根)** <br>
 
-```ruby 
+``` python 
 class Nnode(object):
     # 节点类
     def __init__(self, item):
@@ -116,7 +116,7 @@ if __name__ == '__main__':
     # print('')
     # tree.postorder(tree.root)
 
-
+```
   
 
 
