@@ -114,8 +114,9 @@ if __name__ == '__main__':
     # tree.postorder(tree.root)
 
 
+end
 
-
+---
 
 [python实现二叉树的遍历](https://blog.csdn.net/qq_17753903/article/details/82628228)
 
