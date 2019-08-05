@@ -10,8 +10,7 @@
  
 
 
-'''java
-
+``` python
 class Solution:
     def VerifySquenceOfBST(self, sequence):
         if len(sequence) == 0:
@@ -43,4 +42,4 @@ class Solution:
             else:
                 right = self.VerifySquenceOfBST(righttree)
             return left and right
-'''
+```
