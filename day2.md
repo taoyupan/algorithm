@@ -20,7 +20,7 @@
 **前序遍历 (根-左-右)** <br>
 **中序遍历 (左-根-右)** <br>
 **后序遍历 (左-右-根)** <br>
-
+'''
 class Nnode(object):
     # 节点类
     def __init__(self, item):
@@ -112,6 +112,7 @@ if __name__ == '__main__':
     # print('')
     # tree.postorder(tree.root)
 
+'''
 
 
 
@@ -124,7 +125,6 @@ if __name__ == '__main__':
 
 
 
-
-[python实现二叉树的遍历] (https://blog.csdn.net/qq_17753903/article/details/82628228)
+[python实现二叉树的遍历](https://blog.csdn.net/qq_17753903/article/details/82628228)
 
 
