@@ -1,3 +1,5 @@
+[python实现二叉树的遍历](https://blog.csdn.net/qq_17753903/article/details/82628228)
+
 二叉树的知识点：
 =
   1、非空二叉树第i层中至多有2^i个节点（i>=0）<br>
@@ -5,6 +7,7 @@
   3、n个节点的完全二叉树树高度h=log2^{n}， 即为不大于log2^{n}的最大整数 <br>
 
 ------
+
 
 完全二叉树的性质：
 = 
@@ -114,11 +117,8 @@ if __name__ == '__main__':
     # tree.postorder(tree.root)
 
 
-  end
-'''
+  
 
----
 
-[python实现二叉树的遍历](https://blog.csdn.net/qq_17753903/article/details/82628228)
 
 
