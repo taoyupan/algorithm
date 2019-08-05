@@ -38,7 +38,7 @@ class Solution:
                 else:
                     return False
             if len(lefttree) == 1:
-                return True
+                left = True
             else:
                 # 递归判断左子树
                 left = self.VerifySquenceOfBST(lefttree)
