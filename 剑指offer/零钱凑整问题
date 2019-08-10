@@ -1,0 +1,35 @@
+# 问题1
+  给定零钱样例，如coins=[1,2,5],而且每种零钱的数目不作限制，问能够凑成整数num, 若可以，输出最少零钱张数，若不能，输出-1
+  
+```python
+
+'''
+样例： coins = [1,2,5]
+思路： 动态规划。用dp[i] 表示组成i元所需最少硬币数
+显然，对于coins数组里面的所有元素j，都有dp[j] = 1
+以样例输入为例：  对于其它的dp[i] = 1 + min{dp[i-1], dp[i-2], dp[i-5]}
+'''
+
+def coinChange(coins, amount):
+    '''
+    :type coins: List[int]
+    :type amount: int
+    :return: int
+    '''
+    if amount == 0:
+        return -1
+    dp = []
+    max_int= amount+1  #  表示组成amount元的数量不可能为 amount+1
+    for i in range(amount+1):
+        if i not in coins:
+            dp.append(max_int)
+        else:
+            dp.append(1)
+    for i in range(amount+1):
+        for j in coins:
+            if i > j:
+                dp[i] = min(dp[i], dp[i-j] + 1)
+    return dp[amount] if dp[amount] != max_int else -1
+coins = [1,2,5]
+amount = 11
+print(coinChange(coins,amount))
