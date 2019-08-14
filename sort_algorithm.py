@@ -79,4 +79,56 @@ def insertSort(num):
         num[left] = tem
     return num
 
+
+# 快速排序 (不稳定稳定)
+
+def quick_sort(arr, start, end):
+    if start >= end:
+        return
+    cmp_index = start
+    for i in range(start+1, end):
+        if arr[i] < arr[cmp_index]:
+            temp = arr[i]
+            del arr[i]
+            arr.insert(cmp_index, temp)
+    quick_sort(arr, start=start, end=cmp_index-1)
+    quick_sort(arr, start=cmp_index+1, end=len(arr))
+
+num=[4,7,1,-2,6,3,2,3]
+quick_sort(num,0,len(num))
+print(num)
+
+
+# 归并排序 （稳定）
+
+def merge_sort(arr):
+    if len(arr) <= 1:
+        return arr
+    mid = len(arr)//2
+    # 分 分成左右两部分
+    left = merge_sort(arr[:mid])
+    right = merge_sort(arr[mid:])
+    # 合并
+    def merge(arr1, arr2):
+        res = []  # # 用来存最终排序好的序列
+        h, j = 0, 0
+        while h < len(arr1) and j < len(arr2):
+            if arr1[h] < arr2[j]:
+                res.append(arr1[h])
+                h += 1
+            else:
+                res.append(arr2[j])
+                j += 1
+        if h == len(arr1):
+            for i in arr2[j:]:
+                res.append(i)
+        else:
+            for j in arr1[h:]:
+                res.append(j)
+        return res
+    return merge(left, right)
+
+a = [4, 7, 8, 3, 5, 9]
+print(merge_sort(a))
+
  
